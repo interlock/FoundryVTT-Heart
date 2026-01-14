@@ -5,7 +5,8 @@ import './common/sheet.sass';
 import modules from './**/index.js';
 
 function activateTemplates() {
-    debugger;
+    console.log(`Activating templates`);
+    console.log(templates);
     templates.forEach(function (module) {
         const template = module.default;
         const compiled = Handlebars.compile(template.source);
@@ -211,7 +212,7 @@ Hooks.once('ready', function () {
         if (game.settings.get('heart', 'showStartupMessage')) {
             let d = new Dialog({
                 title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.version }),
-                content: await renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.version }),
+                content: await foundry.applications.handlebars.renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.version }),
                 buttons: {
                     close: {
                         icon: '<i class="fas fa-times"></i>',
