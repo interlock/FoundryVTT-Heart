@@ -8,9 +8,5 @@ module.exports = {
         "minimum": "12",
         "verified": "13",
         "maximum": "13"
-    },
-    url: 'https://github.com/interlock/FoundryVTT-Heart',
-    manifest: 'https://github.com/interlock/FoundryVTT-Heart/releases/latest/download/system.json',
-    readme: 'https://raw.githubusercontent.com/interlock/FoundryVTT-Heart/main/README.md',
-    download: 'https://github.com/interlock/FoundryVTT-Heart/releases/latest/download/heart.zip',
+    }
 };
