@@ -5,6 +5,7 @@ import './common/sheet.sass';
 import modules from './**/index.js';
 
 function activateTemplates() {
+    debugger;
     templates.forEach(function (module) {
         const template = module.default;
         const compiled = Handlebars.compile(template.source);
